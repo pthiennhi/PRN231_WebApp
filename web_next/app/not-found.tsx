@@ -1,29 +1,31 @@
 import Link from "next/link";
+import { Surround, Text } from "@/app/(common)/components";
+import { Button } from "@nextui-org/react";
 
 function NotFoundPage() {
   return (
     <main>
-      <div className="flex flex-col items-center py-40 text-zinc-900 dark:text-zinc-50">
-        <p className="text-4xl font-bold md:text-5xl" aria-label="404">
+      <Surround className="flex flex-col items-center py-40 text-zinc-900 dark:text-zinc-50">
+        <Text className="text-4xl font-bold md:text-5xl" aria-label="404">
           4💡4
-        </p>
-        <h1 className="text-center text-4xl font-bold md:text-5xl">
+        </Text>
+        <Text className="text-center text-4xl font-bold md:text-5xl">
           Page Not Found
-        </h1>
-        <p className="mt-10 text-center text-base font-medium md:text-xl">
+        </Text>
+        <Text className="mt-10 text-center text-base font-medium md:text-xl">
           Sorry, the page you are looking for is being updated to provide better
           quality! <br />
           Please visit again later.
-        </p>
+        </Text>
         <Link href="/" className="mt-5">
-          <button
+          <Button
             title="Go Home"
             className="rounded-md border border-gray-300 bg-violet-500 px-5 py-2 text-lg font-bold text-gray-50 shadow duration-200 hover:bg-violet-700 dark:border-gray-500 dark:text-gray-50"
           >
             Go Home
-          </button>
+          </Button>
         </Link>
-      </div>
+      </Surround>
     </main>
   );
 }
